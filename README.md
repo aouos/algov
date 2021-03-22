@@ -1,0 +1,3 @@
+# anima
+
+## animation algorithms
