@@ -1,32 +1,19 @@
 <template>
-  <div class="anima">
-    <img src="./image/logo/logo.jpg" alt="" />
-    <p>{{ msg }}</p>
+  <div class="app">
+    <bubble-sort></bubble-sort>
   </div>
 </template>
 
 <script>
+import bubbleSort from "./components/bubbleSort.vue";
+
 export default {
-  data() {
-    return {
-      msg: "Welcome to Anima",
-    };
-  },
-  mounted () {
-    console.log("Hello");
+  name: "App",
+  components: {
+    bubbleSort,
   },
 };
 </script>
 
 <style>
-.anima {
-  width: 100%;
-  padding-top: 2em;
-  text-align: center;
-}
-
-.anima img {
-  max-width: 12em;
-  height: 12em;
-}
 </style>

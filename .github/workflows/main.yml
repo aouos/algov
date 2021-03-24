@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  docs:
+  anima:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,10 +32,10 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn
 
-      - name: Build VuePress site
+      - name: Build Anima
         run: yarn build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN_ANIMA }}

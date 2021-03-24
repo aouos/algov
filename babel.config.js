@@ -1,9 +1,6 @@
 module.exports = {
-  presets: [
-    ["@babel/preset-env", {
-      "targets": {
-        "browsers": ["last 2 versions"]
-      }
-    }]
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    ["@babel/plugin-transform-runtime"]
   ]
 }
