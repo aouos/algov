@@ -1,4 +1,4 @@
-name: Build blog
+name: Build Anima
 
 on:
   push:
