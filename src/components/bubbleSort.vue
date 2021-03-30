@@ -1,5 +1,25 @@
 <template>
   <div class="bubble">
+    <!-- Tips -->
+    <div class="tips">
+      <div>
+        <span class="tips_block iactive"></span>
+        <span>变量 i 指向</span>
+      </div>
+      <div>
+        <span class="tips_block jactive"></span>
+        <span>变量 j 指向</span>
+      </div>
+      <div>
+        <span class="tips_block gactive"></span>
+        <span>排序完成元素</span>
+      </div>
+      <div>
+        <span class="tips_block ractive"></span>
+        <span>满足交换条件</span>
+      </div>
+    </div>
+
     <div class="anima">
       <!-- Animation -->
       <div class="item" v-for="(item, index) in items" :key="index">
@@ -39,26 +59,6 @@
       <button @click="addItems">添加元素</button>
       <button @click="autoChange">自动演示</button>
       <button @click="nextChange">手动点击</button>
-    </div>
-
-    <!-- Tips -->
-    <div class="tips">
-      <div>
-        <span class="tips_block iactive"></span>
-        <span>变量i指向</span>
-      </div>
-      <div>
-        <span class="tips_block jactive"></span>
-        <span>变量j指向</span>
-      </div>
-      <div>
-        <span class="tips_block gactive"></span>
-        <span>排序完成</span>
-      </div>
-      <div>
-        <span class="tips_block ractive"></span>
-        <span>满足交换</span>
-      </div>
     </div>
   </div>
 </template>
@@ -138,7 +138,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .bubble {
   width: 100%;
   text-align: center;
@@ -149,6 +149,10 @@ export default {
 .state {
   display: flex;
   justify-content: center;
+}
+
+.anima {
+  padding-top: 2em;
 }
 
 .item {
@@ -224,22 +228,22 @@ button:active {
 }
 
 .tips {
-  position: fixed;
-  right: 1em;
-  top: 1em;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .tips div {
   display: flex;
   align-items: center;
+  margin: 1em 1em;
 }
 
 .tips_block {
   display: inline-block;
   width: 2em;
   height: 2em;
-  margin: 0.2em;
+  margin-right: 0.5em;
   border-radius: 0.2em;
 }
 </style>
