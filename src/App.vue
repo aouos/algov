@@ -132,6 +132,7 @@ body {
   display: flex;
   flex-direction: row;
   height: 100%;
+  font-family: sans-serif;
   user-select: none;
 }
 

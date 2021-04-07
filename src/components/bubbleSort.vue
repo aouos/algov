@@ -46,7 +46,7 @@
     <div class="state">
       <div class="item state_box" v-for="(item, index) in items" :key="index">
         <span>
-          {{ index === points.x ? "☚" : "" }}
+          {{ index === points.x ? "⇦" : "" }}
           {{ index === points.i ? "i = " + points.i : "" }}
           {{ index === points.j ? "j = " + points.j : "" }}
         </span>
@@ -55,10 +55,8 @@
 
     <!-- Button group -->
     <div class="btn_group">
-      <button @click="delItems">删除元素</button>
-      <button @click="addItems">添加元素</button>
-      <button @click="autoChange">自动演示</button>
-      <button @click="nextChange">手动点击</button>
+      <button @click.once="autoChange">▶</button>
+      <button @click="nextChange">☛</button>
     </div>
   </div>
 </template>
@@ -166,7 +164,7 @@ export default {
 
 .item span {
   display: block;
-  padding: 1px 0;
+  /* padding: 1px 0; */
   width: 100%;
   border-radius: 0.2em;
 }
@@ -182,8 +180,10 @@ export default {
 .state_box {
   background-color: rgb(246, 248, 250);
   color: #333;
-  padding: 0.2em 0;
   text-align: center;
+  height: 2em;
+  line-height: 2em;
+  overflow: hidden;
 }
 
 .iactive {
