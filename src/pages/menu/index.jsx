@@ -3,6 +3,8 @@ import React, { memo, useState } from 'react';
 import { Menu } from 'tdesign-react';
 import { AppIcon, OrderAscendingIcon, SearchIcon, ViewListIcon, CodeIcon } from 'tdesign-icons-react';
 
+import Logo from './logo';
+
 const { SubMenu, MenuItem } = Menu;
 
 const AMenu = memo(() => {
@@ -16,7 +18,7 @@ const AMenu = memo(() => {
       expandMutex={false}
       onChange={(v) => setActive(v)}
       operations={<ViewListIcon className="t-menu__operations-icon" onClick={() => setCollapsed(!collapsed)} />}
-      logo={<p>Algo-V</p>}
+      logo={<Logo isShow={!collapsed} />}
     >
       <MenuItem value="0" icon={<AppIcon />}>
         Started

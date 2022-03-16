@@ -4,6 +4,7 @@ import { Layout } from 'tdesign-react';
 import './style.less';
 import AMenu from '../menu';
 import AHeader from '../header';
+import AContent from '../content';
 
 const { Header, Content } = Layout;
 
@@ -17,7 +18,9 @@ const Home = memo(() => {
         <Header className={`${prefix}-header`}>
           <AHeader></AHeader>
         </Header>
-        <Content></Content>
+        <Content className={`${prefix}-content`}>
+          <AContent></AContent>
+        </Content>
       </Layout>
     </Layout>
   );
