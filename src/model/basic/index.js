@@ -15,7 +15,6 @@ const columnar = {
       show: false,
     },
     axisLabel: {
-      fontSize: 16,
       fontWeight: 'bold',
     },
   },
@@ -25,8 +24,8 @@ const columnar = {
   series: [
     {
       type: 'bar',
-      barMaxWidth: 40,
-      barCategoryGap: '20%',
+      barMaxWidth: 60,
+      barCategoryGap: '50%',
       itemStyle: {
         barBorderRadius: 3,
         color: '#2151D1',

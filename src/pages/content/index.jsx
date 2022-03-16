@@ -8,9 +8,8 @@ const prefix = 'content';
 const AContent = memo(() => {
   return (
     <div className={`${prefix}`}>
-      <div id="algo">
-        <BubbleSort></BubbleSort>
-      </div>
+      <div id="algo"></div>
+      <BubbleSort></BubbleSort>
     </div>
   );
 });
