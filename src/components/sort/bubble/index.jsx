@@ -36,25 +36,36 @@ const bubbleSort = memo(() => {
   };
 
   return (
-    <div className="contral-bar">
-      <Row gutter={20}>
-        <Col>
-          <Button icon={<RefreshIcon />} disabled={true}></Button>
-        </Col>
+    <>
+      <div id="algo"></div>
 
-        <Col>
-          <Button
-            icon={!disabled ? <CaretRightIcon /> : <StopCircleIcon />}
-            onClick={playAnimation}
-            disabled={disabled}
-          ></Button>
-        </Col>
+      <div className="contral-bar">
+        <Row gutter={20}>
+          <Col>
+            <Button icon={<RefreshIcon />} disabled={true}></Button>
+          </Col>
 
-        <Col>
-          <Slider className="contral-slider" value={value} min={1} max={5} onChange={setValue} disabled={true}></Slider>
-        </Col>
-      </Row>
-    </div>
+          <Col>
+            <Button
+              icon={!disabled ? <CaretRightIcon /> : <StopCircleIcon />}
+              onClick={playAnimation}
+              disabled={disabled}
+            ></Button>
+          </Col>
+
+          <Col>
+            <Slider
+              className="contral-slider"
+              value={value}
+              min={1}
+              max={5}
+              onChange={setValue}
+              disabled={true}
+            ></Slider>
+          </Col>
+        </Row>
+      </div>
+    </>
   );
 });
 

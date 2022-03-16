@@ -13,6 +13,7 @@ export default defineConfig({
       common: resolve(__dirname, './src/common'),
       model: resolve(__dirname, './src/model'),
       components: resolve(__dirname, './src/components'),
+      routes: resolve(__dirname, './src/routes'),
     },
   },
 });

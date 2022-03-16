@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 import logo from 'assets/favicon.svg';
 import './style.less';
 
-const prefix = 'logo';
+const prefix = 'menu-logo';
 
 const ALogo = memo((props) => {
   const { isShow = true } = props;
