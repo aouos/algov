@@ -64,3 +64,27 @@ export const setSortedStyle = (idx, array) => {
 
   return _array;
 };
+
+/**
+ * set before sorted style
+ *
+ * @param {number} idx start index
+ * @param {array} array original array
+ * @returns {array}  before sorted array style
+ */
+export const setBeforeSortedStyle = (idx, array) => {
+  const _array = [...array];
+
+  for (let i = idx - 1; i >= 0; i--) {
+    const _obj = {
+      value: _array[i],
+      itemStyle: {
+        color: '#68A060',
+      },
+    };
+
+    _array[i] = _obj;
+  }
+
+  return _array;
+};

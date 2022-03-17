@@ -29,14 +29,14 @@ export const menus = [
         path: '/sort/bubble',
       },
       {
-        key: '/sort/selection',
-        label: 'selectionSort',
-        path: '/sort/selection',
-      },
-      {
         key: '/sort/insertion',
         label: 'insertionSort',
         path: '/sort/insertion',
+      },
+      {
+        key: '/sort/selection',
+        label: 'selectionSort',
+        path: '/sort/selection',
       },
       {
         key: '/sort/shell',

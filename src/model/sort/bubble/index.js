@@ -6,7 +6,6 @@ const _array = [...sortArray];
 const _len = _array.length;
 
 export function* getBubbleData() {
-  const text = [..._array];
   yield _array;
 
   for (let j = _len - 1; j > 0; j--) {
@@ -17,7 +16,6 @@ export function* getBubbleData() {
       xData[i] = 'i';
 
       const beforeS = setSortedStyle(j, setIndexStyle(i, _array));
-      treeNode.title.text = `[${text}]`;
       treeNode.xAxis.data = xData;
       treeNode.series[0].data = beforeS;
 

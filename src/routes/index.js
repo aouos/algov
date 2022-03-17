@@ -1,7 +1,9 @@
 import AStart from 'components/start';
 import ABigO from 'components/start/bigo';
 import BubbleSort from 'components/sort/bubble';
-import AError from 'components/error';
+import AError from 'components/others/error';
+import AEmpty from 'components/others/empty';
+import InsertionSort from 'components/sort/insertion';
 
 export const routes = [
   {
@@ -18,11 +20,11 @@ export const routes = [
   },
   {
     path: '/sort/selection',
-    component: AError,
+    component: AEmpty,
   },
   {
     path: '/sort/insertion',
-    component: AError,
+    component: InsertionSort,
   },
   {
     path: '/sort/shell',
@@ -30,7 +32,7 @@ export const routes = [
   },
   {
     path: '/sort/merge',
-    component: AError,
+    component: AEmpty,
   },
   {
     path: '/sort/quick',
@@ -38,19 +40,15 @@ export const routes = [
   },
   {
     path: '/sort/heap',
-    component: AError,
+    component: AEmpty,
   },
   {
     path: '/search/binary',
     component: AError,
   },
   {
-    path: '/sort/shell',
-    component: AError,
-  },
-  {
     path: '/leetcode/0001',
-    component: AError,
+    component: AEmpty,
   },
   {
     path: '*',

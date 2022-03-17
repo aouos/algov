@@ -6,17 +6,19 @@ export const option = {
         left: 'center',
         top: 'center',
         style: {
-          text: 'Algo-V',
-          fontSize: 150,
+          text: 'Algorithm\nvisualization',
+          fontSize: 120,
           fontWeight: 'bold',
           lineDash: [0, 200],
           lineDashOffset: 0,
+          lineHeight: 150,
+          textAlign: 'center',
           fill: 'transparent',
           stroke: '#2151D1',
           lineWidth: 2,
         },
         keyframeAnimation: {
-          duration: 3600,
+          duration: 4500,
           loop: true,
           keyframes: [
             {

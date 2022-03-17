@@ -1,16 +1,16 @@
-import React, { useEffect, useState, memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import * as echarts from 'echarts';
 import { Button, Row, Col, Slider } from 'tdesign-react';
 import { PlayCircleIcon, RefreshIcon, StopCircleIcon } from 'tdesign-icons-react';
 
-import { getBubbleData } from 'model/sort/bubble';
+import { getInsertionData } from 'model/sort/insertion';
 
 import './style.less';
 
-const BubbleSort = memo(() => {
+const InsertionSort = memo(() => {
   const [value, setValue] = useState(1);
   const [disabled, setDisabled] = useState(false);
-  let getData = getBubbleData();
+  let getData = getInsertionData();
   let myChart = null;
 
   useEffect(() => {
@@ -74,4 +74,4 @@ const BubbleSort = memo(() => {
   );
 });
 
-export default BubbleSort;
+export default InsertionSort;
