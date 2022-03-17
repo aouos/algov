@@ -16,7 +16,7 @@ export const option = {
           lineWidth: 2,
         },
         keyframeAnimation: {
-          duration: 3000,
+          duration: 3600,
           loop: true,
           keyframes: [
             {

@@ -8,8 +8,13 @@ export const menus = [
     children: [
       {
         key: '/start',
-        label: 'Welcome',
+        label: 'Algo-V',
         path: '/start',
+      },
+      {
+        key: '/bigo',
+        label: 'Big-O',
+        path: '/bigo',
       },
     ],
   },

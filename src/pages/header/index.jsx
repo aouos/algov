@@ -1,17 +1,21 @@
 import React, { memo } from 'react';
 import { Row, Col, Button, Popup } from 'tdesign-react';
-import { LogoGithubIcon, SettingIcon, HelpCircleIcon, InternetIcon } from 'tdesign-icons-react';
+import { LogoGithubIcon, SettingIcon, HelpCircleIcon, JumpIcon } from 'tdesign-icons-react';
 
 import AHelp from './help';
 
 const AHeader = memo(() => {
+  const gotoGithub = () => {
+    window.open('https://github.com/aouos/algo-v');
+  };
+
   return (
     <div>
       <Row gutter={10}>
         <Col>
           <Popup showArrow content={<AHelp></AHelp>}>
             <Button shape="square" size="large" variant="text">
-              <InternetIcon />
+              <JumpIcon />
             </Button>
           </Popup>
         </Col>
@@ -26,7 +30,7 @@ const AHeader = memo(() => {
           </Button>
         </Col>
         <Col>
-          <Button shape="square" size="large" variant="text">
+          <Button shape="square" size="large" variant="text" onClick={gotoGithub}>
             <LogoGithubIcon />
           </Button>
         </Col>

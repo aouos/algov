@@ -1,4 +1,5 @@
 import AStart from 'components/start';
+import ABigO from 'components/start/bigo';
 import BubbleSort from 'components/sort/bubble';
 import AError from 'components/error';
 
@@ -6,6 +7,10 @@ export const routes = [
   {
     path: '/start',
     component: AStart,
+  },
+  {
+    path: '/bigo',
+    component: ABigO,
   },
   {
     path: '/sort/bubble',
@@ -45,6 +50,10 @@ export const routes = [
   },
   {
     path: '/leetcode/0001',
+    component: AError,
+  },
+  {
+    path: '*',
     component: AError,
   },
 ];

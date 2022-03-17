@@ -2,6 +2,11 @@ const columnar = {
   animation: false,
   title: {
     text: '',
+    left: 'center',
+    textStyle: {
+      fontSize: 20,
+      lineHeight: 50,
+    },
   },
   tooltip: {
     show: false,
@@ -28,7 +33,7 @@ const columnar = {
       barCategoryGap: '50%',
       itemStyle: {
         barBorderRadius: 3,
-        color: '#2151D1',
+        color: '#91B5F4',
       },
       data: [],
       label: {

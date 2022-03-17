@@ -1,15 +1,15 @@
 import React, { memo, useEffect } from 'react';
 import * as echarts from 'echarts';
 
-import { option } from 'model/start/algov';
+import { option } from 'model/start/bigo';
 
-const AStart = memo(() => {
+const BigO = memo(() => {
   useEffect(() => {
     const myChart = echarts.init(document.getElementById('start'));
 
     myChart.setOption(option);
   }, []);
-  return <div id="start">AStart</div>;
+  return <div id="start"></div>;
 });
 
-export default AStart;
+export default BigO;
