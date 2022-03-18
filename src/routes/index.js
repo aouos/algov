@@ -4,6 +4,7 @@ import BubbleSort from 'components/sort/bubble';
 import AError from 'components/others/error';
 import AEmpty from 'components/others/empty';
 import InsertionSort from 'components/sort/insertion';
+import SelectionSort from 'components/sort/selection';
 
 export const routes = [
   {
@@ -20,7 +21,7 @@ export const routes = [
   },
   {
     path: '/sort/selection',
-    component: AEmpty,
+    component: SelectionSort,
   },
   {
     path: '/sort/insertion',

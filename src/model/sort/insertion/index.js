@@ -1,11 +1,9 @@
 import { columnar } from 'model/basic';
-import { sortArray } from 'common/array';
 import { setActiveStyle, setIndexStyle, setSortedStyle, setBeforeSortedStyle } from 'utils/itemstyle';
 
-const _array = [...sortArray];
-const _len = _array.length;
-
-export function* getInsertionData() {
+export function* getInsertionData(array) {
+  const _array = [...array];
+  const _len = _array.length;
   const initTreeNode = JSON.parse(JSON.stringify(columnar));
   initTreeNode.series[0].data = [..._array];
 
@@ -14,9 +12,8 @@ export function* getInsertionData() {
   for (let i = 1; i < _len; i++) {
     const treeNode = JSON.parse(JSON.stringify(columnar));
     const xData = new Array(_len).fill('');
-
-    xData[i] = 'i';
     const beforeS = setIndexStyle(i, _array);
+    xData[i] = 'i';
     treeNode.xAxis.data = xData;
     treeNode.series[0].data = beforeS;
 
@@ -25,10 +22,9 @@ export function* getInsertionData() {
     for (let j = i; j > 0; j--) {
       const treeNode = JSON.parse(JSON.stringify(columnar));
       const xData = new Array(_len).fill('');
-
+      const beforeS = setIndexStyle(j, _array);
       xData[i] = j === i ? '' : 'i';
       xData[j] = j === i ? 'j = i' : 'j';
-      const beforeS = setIndexStyle(j, _array);
       treeNode.xAxis.data = xData;
       treeNode.series[0].data = beforeS;
 
@@ -54,5 +50,6 @@ export function* getInsertionData() {
 
   const treeNode = JSON.parse(JSON.stringify(columnar));
   treeNode.series[0].data = setSortedStyle(-1, _array);
+
   yield treeNode;
 }

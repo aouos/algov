@@ -4,27 +4,33 @@ import { Button, Row, Col, Slider } from 'tdesign-react';
 import { PlayCircleIcon, RefreshIcon, StopCircleIcon } from 'tdesign-icons-react';
 
 import { getInsertionData } from 'model/sort/insertion';
+import { getRandomLength, getRandomArray } from 'utils/random';
 
 import './style.less';
 
 const InsertionSort = memo(() => {
   const [value, setValue] = useState(1);
   const [disabled, setDisabled] = useState(false);
-  let getData = getInsertionData();
+  let getData = null;
   let myChart = null;
 
   useEffect(() => {
-    myChart = echarts.init(document.getElementById('algo'));
-    getData.next();
+    setChartData(getRandomArray(getRandomLength()));
 
-    const ret = getData.next();
-    myChart.setOption(ret.value);
-
-    return () => {
-      getData.return();
-      myChart = null;
-    };
+    return () => clearChartData();
   }, []);
+
+  const setChartData = (array) => {
+    getData = getInsertionData(array);
+    myChart = echarts.init(document.getElementById('algo'));
+
+    myChart.setOption(getData.next().value);
+  };
+
+  const clearChartData = () => {
+    getData && getData.return();
+    myChart && (myChart = null);
+  };
 
   const playAnimation = () => {
     setDisabled(true);
@@ -46,7 +52,7 @@ const InsertionSort = memo(() => {
       <div className="contral-bar">
         <Row gutter={20}>
           <Col>
-            <Button theme="default" icon={<RefreshIcon />} disabled={true}></Button>
+            <Button theme="default" icon={<RefreshIcon />} disabled></Button>
           </Col>
 
           <Col>

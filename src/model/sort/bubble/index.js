@@ -1,21 +1,21 @@
 import { columnar } from 'model/basic';
-import { sortArray } from 'common/array';
 import { setActiveStyle, setIndexStyle, setSortedStyle } from 'utils/itemstyle';
 
-const _array = [...sortArray];
-const _len = _array.length;
+export function* getBubbleData(array) {
+  const _array = [...array];
+  const _len = _array.length;
+  const initTreeNode = JSON.parse(JSON.stringify(columnar));
+  initTreeNode.series[0].data = [..._array];
 
-export function* getBubbleData() {
-  yield _array;
+  yield initTreeNode;
 
   for (let j = _len - 1; j > 0; j--) {
     for (let i = 0; i < j; i++) {
       const treeNode = JSON.parse(JSON.stringify(columnar));
       const xData = new Array(_len).fill('');
+      const beforeS = setSortedStyle(j, setIndexStyle(i, _array));
       xData[j] = 'j';
       xData[i] = 'i';
-
-      const beforeS = setSortedStyle(j, setIndexStyle(i, _array));
       treeNode.xAxis.data = xData;
       treeNode.series[0].data = beforeS;
 
@@ -24,6 +24,7 @@ export function* getBubbleData() {
       if (_array[i] > _array[i + 1]) {
         const changeS = setSortedStyle(j, setActiveStyle(i, _array));
         treeNode.series[0].data = changeS;
+
         yield treeNode;
 
         const temp = _array[i];
@@ -40,5 +41,6 @@ export function* getBubbleData() {
 
   const treeNode = JSON.parse(JSON.stringify(columnar));
   treeNode.series[0].data = setSortedStyle(-1, _array);
+
   yield treeNode;
 }

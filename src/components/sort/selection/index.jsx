@@ -1,14 +1,14 @@
-import React, { useEffect, useState, memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import * as echarts from 'echarts';
 import { Button, Row, Col, Slider } from 'tdesign-react';
 import { PlayCircleIcon, RefreshIcon, StopCircleIcon } from 'tdesign-icons-react';
 
-import { getBubbleData } from 'model/sort/bubble';
+import { getSelectionSort } from 'model/sort/selection';
 import { getRandomLength, getRandomArray } from 'utils/random';
 
 import './style.less';
 
-const BubbleSort = memo(() => {
+const SelectionSort = memo(() => {
   const [value, setValue] = useState(1);
   const [disabled, setDisabled] = useState(false);
   let getData = null;
@@ -21,7 +21,7 @@ const BubbleSort = memo(() => {
   }, []);
 
   const setChartData = (array) => {
-    getData = getBubbleData(array);
+    getData = getSelectionSort(array);
     myChart = echarts.init(document.getElementById('algo'));
 
     myChart.setOption(getData.next().value);
@@ -52,7 +52,7 @@ const BubbleSort = memo(() => {
       <div className="contral-bar">
         <Row gutter={20}>
           <Col>
-            <Button theme="default" icon={<RefreshIcon />} disabled={true}></Button>
+            <Button theme="default" icon={<RefreshIcon />} disabled></Button>
           </Col>
 
           <Col>
@@ -80,4 +80,4 @@ const BubbleSort = memo(() => {
   );
 });
 
-export default BubbleSort;
+export default SelectionSort;
