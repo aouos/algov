@@ -5,6 +5,8 @@ import AError from 'components/others/error';
 import AEmpty from 'components/others/empty';
 import InsertionSort from 'components/sort/insertion';
 import SelectionSort from 'components/sort/selection';
+import AStack from 'components/base/stack';
+import AQueue from 'components/base/queue';
 
 export const routes = [
   {
@@ -14,6 +16,14 @@ export const routes = [
   {
     path: '/bigo',
     component: ABigO,
+  },
+  {
+    path: '/base/stack',
+    component: AStack,
+  },
+  {
+    path: '/base/queue',
+    component: AQueue,
   },
   {
     path: '/sort/bubble',

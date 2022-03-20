@@ -210,10 +210,17 @@
     "@babel/plugin-syntax-jsx" "^7.16.7"
     "@babel/types" "^7.17.0"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.16.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7", "@babel/runtime@~7.17.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13":
   version "7.17.7"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.17.7.tgz#a5f3328dc41ff39d803f311cfe17703418cf9825"
   integrity sha512-L6rvG9GDxaLgFjg41K+5Yv9OMrU98sWe+Ykmc6FDJW/+vYZMhdOMKkISgzptMaERHvS2Y2lw9MDRm2gHhlQQoA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.16.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7", "@babel/runtime@~7.17.2":
+  version "7.17.8"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.17.8.tgz#3e56e4aff81befa55ac3ac6a0967349fd1c5bca2"
+  integrity sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -3279,7 +3286,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tdesign-icons-react@^0.0.9, tdesign-icons-react@~0.0.8:
+tdesign-icons-react@^0.0.9, tdesign-icons-react@~0.0.9:
   version "0.0.9"
   resolved "https://registry.npmjs.org/tdesign-icons-react/-/tdesign-icons-react-0.0.9.tgz#5ad88dd31348cf363ae24896efb5e8db799b203b"
   integrity sha512-BJbYIzmlfr34gDxNBS2a1xNeuaHN1X/eMVAEZhAu+2XypzSuqnwTDasD2uxd2pRpVHJ+AHhF0NUp2mxJy8QXpA==
@@ -3287,10 +3294,10 @@ tdesign-icons-react@^0.0.9, tdesign-icons-react@~0.0.8:
     "@babel/runtime" "^7.16.5"
     classnames "^2.2.6"
 
-tdesign-react@^0.27.2:
-  version "0.27.2"
-  resolved "https://registry.npmjs.org/tdesign-react/-/tdesign-react-0.27.2.tgz#b4a062a8a74b57484cf5c9c23d13a95a58804182"
-  integrity sha512-8uY4DP5XlPhpfB5sInfE4oiXmbMO43nvDQ/MDmOgqkqhKbpHiAo5oBB4a5oSLy3WziGFXQ0JL5ludMze1PKAxA==
+tdesign-react@^0.28.0:
+  version "0.28.0"
+  resolved "https://registry.npmjs.org/tdesign-react/-/tdesign-react-0.28.0.tgz#7c7f795b920ca23241b0fdfe04135fda34afa4f0"
+  integrity sha512-i5brfBVJ7smFTnSOhp2IZ1a6jrQlydEhUgZMLYHqnprIHLMovU7a5nwcrT21TkZXfqcTTng5NAyyxb2UcLlsXA==
   dependencies:
     "@babel/runtime" "~7.17.2"
     "@popperjs/core" "~2.11.2"
@@ -3302,7 +3309,7 @@ tdesign-react@^0.27.2:
     raf "~3.4.1"
     react-popper "~2.2.5"
     react-transition-group "~4.4.1"
-    tdesign-icons-react "~0.0.8"
+    tdesign-icons-react "~0.0.9"
     tslib "~2.3.1"
     use-resize-observer "^8.0.0"
     uuid "~8.3.2"

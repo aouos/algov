@@ -1,4 +1,4 @@
-import { AppIcon, OrderAscendingIcon, SearchIcon, CodeIcon } from 'tdesign-icons-react';
+import { AppIcon, OrderAscendingIcon, SearchIcon, CodeIcon, ForkIcon } from 'tdesign-icons-react';
 
 export const menus = [
   {
@@ -15,6 +15,23 @@ export const menus = [
         key: '/bigo',
         label: 'Big-O',
         path: '/bigo',
+      },
+    ],
+  },
+  {
+    key: 'base',
+    label: 'Data-Structure',
+    Icon: ForkIcon,
+    children: [
+      {
+        key: '/base/stack',
+        label: 'Stack',
+        path: '/base/stack',
+      },
+      {
+        key: '/base/queue',
+        label: 'Queue',
+        path: '/base/queue',
       },
     ],
   },

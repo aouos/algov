@@ -19,7 +19,7 @@
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.1",
     "tdesign-icons-react": "^0.0.9",
-    "tdesign-react": "^0.27.2"
+    "tdesign-react": "^0.28.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",

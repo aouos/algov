@@ -25,3 +25,12 @@ export const getRandomArray = (len) => {
 
   return _array;
 };
+
+/**
+ * get a random number
+ *
+ * @returns {number} return a random number
+ */
+export const getRandomNumber = () => {
+  return Math.ceil(Math.random() * 50);
+};
