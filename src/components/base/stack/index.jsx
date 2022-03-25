@@ -1,11 +1,17 @@
 import React, { memo, useEffect, useState } from 'react';
-import * as echarts from 'echarts';
+import * as echarts from 'echarts/core';
+import { GridComponent } from 'echarts/components';
+import { BarChart } from 'echarts/charts';
+import { CanvasRenderer } from 'echarts/renderers';
+
 import { Button, Row, Col, Popup } from 'tdesign-react';
 
 import { baseColumnar } from 'model/basic';
 import { getRandomArray, getRandomNumber } from 'utils/random';
 
 import './style.less';
+
+echarts.use([GridComponent, BarChart, CanvasRenderer]);
 
 const AStack = memo(() => {
   const [disabled, setDisabled] = useState(false);

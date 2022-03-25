@@ -1,5 +1,9 @@
 import React, { useEffect, useState, memo } from 'react';
-import * as echarts from 'echarts';
+import * as echarts from 'echarts/core';
+import { GridComponent } from 'echarts/components';
+import { BarChart } from 'echarts/charts';
+import { CanvasRenderer } from 'echarts/renderers';
+
 import { Button, Row, Col, Slider } from 'tdesign-react';
 import { PlayCircleIcon, RefreshIcon, StopCircleIcon } from 'tdesign-icons-react';
 
@@ -7,6 +11,8 @@ import { getBubbleData } from 'model/sort/bubble';
 import { getRandomLength, getRandomArray } from 'utils/random';
 
 import './style.less';
+
+echarts.use([GridComponent, BarChart, CanvasRenderer]);
 
 const BubbleSort = memo(() => {
   const [value, setValue] = useState(1);

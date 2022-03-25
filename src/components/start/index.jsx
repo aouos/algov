@@ -1,5 +1,10 @@
 import React, { memo, useEffect } from 'react';
-import * as echarts from 'echarts';
+import * as echarts from 'echarts/core';
+
+import { GraphicComponent } from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([GraphicComponent, CanvasRenderer]);
 
 import { option } from 'model/start/algov';
 
