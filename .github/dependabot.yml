@@ -9,3 +9,8 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    allow:
+      - dependency-name: "vite"
+      - dependency-name: "tdesign-react"
+      - dependency-name: "tdesign-icons-react"
+      - dependency-name: "echarts"
