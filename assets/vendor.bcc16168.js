@@ -1,4 +1,4 @@
-import{c as bs}from"./react.094fdb28.js";/*
+import{c as bs}from"./react.2768c77b.js";/*
 object-assign
 (c) Sindre Sorhus
 @license MIT
