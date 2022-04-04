@@ -1112,10 +1112,10 @@ eastasianwidth@^0.2.0:
   resolved "https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz#696ce2ec0aa0e6ea93a397ffcf24aa7840c827cb"
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
-echarts@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.npmjs.org/echarts/-/echarts-5.3.1.tgz#709e03aaf8c7a4439788272ee5c500cf0dce7e5b"
-  integrity sha512-nWdlbgX3OVY0hpqncSvp0gDt1FRSKWn7lsWEH+PHmfCuvE0QmSw17pczQvm8AvawnLEkmf1Cts7YwQJZNC0AEQ==
+echarts@^5.3.2:
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/echarts/-/echarts-5.3.2.tgz#0a7b3be8c48a48b2e7cb1b82121df0c208d42d2c"
+  integrity sha512-LWCt7ohOKdJqyiBJ0OGBmE9szLdfA9sGcsMEi+GGoc6+Xo75C+BkcT/6NNGRHAWtnQl2fNow05AQjznpap28TQ==
   dependencies:
     tslib "2.3.0"
     zrender "5.3.1"
