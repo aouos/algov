@@ -519,6 +519,16 @@
   resolved "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@types/sortablejs@^1.10.7":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@types/sortablejs/-/sortablejs-1.13.0.tgz#870223438f8f2cd81157b128a4c0261adbcaa946"
+  integrity sha512-C3064MH72iEfeGCYEGCt7FCxXoAXaMPG0QPnstcxvPmbl54erpISu06d++FY37Smja64iWy5L8wOyHHBghWbJQ==
+
+"@types/tinycolor2@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@types/tinycolor2/-/tinycolor2-1.4.3.tgz#ed4a0901f954b126e6a914b4839c77462d56e706"
+  integrity sha512-Kf1w9NE5HEgGxCRyIcRXR/ZYtDv0V8FVPtYHwLxl0O+maGX0erE77pQlD0gpP+/KByMZ87mOA79SjifhSB3PjQ==
+
 "@vitejs/plugin-react@^1.0.7":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-1.2.0.tgz#4cfb4c0475e93885e56d66ff15e12ef4c34b0af0"
@@ -3090,6 +3100,11 @@ slice-ansi@^5.0.0:
     ansi-styles "^6.0.0"
     is-fullwidth-code-point "^4.0.0"
 
+sortablejs@^1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.15.0.tgz#53230b8aa3502bb77a29e2005808ffdb4a5f7e2a"
+  integrity sha512-bv9qgVMjUMf89wAvM6AxVvS/4MX3sPeN0+agqShejLU5z5GX4C75ow1O2e5k4L6XItUyAK3gH6AxSbXrOM5e8w==
+
 source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
@@ -3285,7 +3300,15 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tdesign-icons-react@^0.0.9, tdesign-icons-react@~0.0.9:
+tdesign-icons-react@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/tdesign-icons-react/-/tdesign-icons-react-0.0.10.tgz#ee68c326b9970dc8e2f15fc6a448e1898f994491"
+  integrity sha512-azFKwQ09rj1MXIgfJlTNpkvjXvFmPFhbb1FLkL2qbn+1IQ0IpCFV48C1TIWkANsmvMNIo3YxApOrBtcLB9fV0g==
+  dependencies:
+    "@babel/runtime" "^7.16.5"
+    classnames "^2.2.6"
+
+tdesign-icons-react@^0.0.9:
   version "0.0.9"
   resolved "https://registry.npmjs.org/tdesign-icons-react/-/tdesign-icons-react-0.0.9.tgz#5ad88dd31348cf363ae24896efb5e8db799b203b"
   integrity sha512-BJbYIzmlfr34gDxNBS2a1xNeuaHN1X/eMVAEZhAu+2XypzSuqnwTDasD2uxd2pRpVHJ+AHhF0NUp2mxJy8QXpA==
@@ -3293,13 +3316,15 @@ tdesign-icons-react@^0.0.9, tdesign-icons-react@~0.0.9:
     "@babel/runtime" "^7.16.5"
     classnames "^2.2.6"
 
-tdesign-react@^0.30.1:
-  version "0.30.1"
-  resolved "https://registry.yarnpkg.com/tdesign-react/-/tdesign-react-0.30.1.tgz#7105dad19cce758b01298518b2abec0114f17af7"
-  integrity sha512-zWSc32xN2OnXfsCkb3PCEoss/7ean8msXna8zt/NHivjcfa9sdxIJC+j29pTZigroVNhfDYWfAn0a6Eyh2ACLA==
+tdesign-react@^0.32.3:
+  version "0.32.3"
+  resolved "https://registry.yarnpkg.com/tdesign-react/-/tdesign-react-0.32.3.tgz#0240f7601982ce8e0ae83c404185b1c4cd6d6713"
+  integrity sha512-Crl04i0rjBt7PS80esK9LPYgTTiYFwpYVyTF/ctQ08Scxvccj4RgnLqKsjML0KBqqQbfRFIPNsyIqSDMo/UmjQ==
   dependencies:
     "@babel/runtime" "~7.17.2"
     "@popperjs/core" "~2.11.2"
+    "@types/sortablejs" "^1.10.7"
+    "@types/tinycolor2" "^1.4.3"
     classnames "~2.3.1"
     clipboard "~2.0.8"
     dayjs "~1.10.8"
@@ -3308,7 +3333,9 @@ tdesign-react@^0.30.1:
     raf "~3.4.1"
     react-popper "~2.2.5"
     react-transition-group "~4.4.1"
-    tdesign-icons-react "~0.0.9"
+    sortablejs "^1.15.0"
+    tdesign-icons-react "^0.0.10"
+    tinycolor2 "^1.4.2"
     tslib "~2.3.1"
     use-resize-observer "^8.0.0"
     uuid "~8.3.2"
@@ -3350,6 +3377,11 @@ tiny-warning@^1.0.0, tiny-warning@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
+
+tinycolor2@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
+  integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
 
 tmp@^0.0.33:
   version "0.0.33"
