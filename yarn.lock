@@ -3285,7 +3285,15 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tdesign-icons-react@^0.0.9, tdesign-icons-react@~0.0.9:
+tdesign-icons-react@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/tdesign-icons-react/-/tdesign-icons-react-0.1.0.tgz#eae217bc6a39f6353a893968fcd35dcce204f07f"
+  integrity sha512-wTxVIVsGqF5U/ara8Q2B1uCPtnHUX8zRShd9z06v66WpSLe3r3azNFrewZkWO0spEmT2u+j1IiyOFLaqQ0QYeA==
+  dependencies:
+    "@babel/runtime" "^7.16.5"
+    classnames "^2.2.6"
+
+tdesign-icons-react@~0.0.9:
   version "0.0.9"
   resolved "https://registry.npmjs.org/tdesign-icons-react/-/tdesign-icons-react-0.0.9.tgz#5ad88dd31348cf363ae24896efb5e8db799b203b"
   integrity sha512-BJbYIzmlfr34gDxNBS2a1xNeuaHN1X/eMVAEZhAu+2XypzSuqnwTDasD2uxd2pRpVHJ+AHhF0NUp2mxJy8QXpA==
